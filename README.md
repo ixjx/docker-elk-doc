@@ -2,4 +2,8 @@
 
 Elasticsearch, Logstash, Kibana (ELK) Docker image documentation Zh-CN
 
-http://elk-docker.readthedocs.io/
+source：http://elk-docker.readthedocs.io/
+
+中文gitbook: https://ixjx.gitbooks.io/docker-elk-doc
+
+github: https://github.com/ixjx/docker-elk-doc
