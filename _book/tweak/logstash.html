@@ -1,0 +1,785 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>更新Logstash参数 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="elasticsearch_p.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../prerequisites.html">
+            
+                <a href="../prerequisites.html">
+            
+                    
+                    前提
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../install/">
+            
+                <a href="../install/">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../install/pull.html">
+            
+                <a href="../install/pull.html">
+            
+                    
+                    拉取特定版本组合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../usage/">
+            
+                <a href="../usage/">
+            
+                    
+                    使用方法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../usage/compose.html">
+            
+                <a href="../usage/compose.html">
+            
+                    
+                    使用Docker Compose运行容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../usage/kit.html">
+            
+                <a href="../usage/kit.html">
+            
+                    
+                    使用Kitematic运行容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../usage/log.html">
+            
+                <a href="../usage/log.html">
+            
+                    
+                    创建虚拟日志条目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../usage/start.html">
+            
+                <a href="../usage/start.html">
+            
+                    
+                    有选择地启动服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../usage/var.html">
+            
+                <a href="../usage/var.html">
+            
+                    
+                    重写启动变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../usage/hooks.html">
+            
+                <a href="../usage/hooks.html">
+            
+                    
+                    Pre-hooks和post-hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../logs/">
+            
+                <a href="../logs/">
+            
+                    
+                    日志转发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../logs/filebeat.html">
+            
+                <a href="../logs/filebeat.html">
+            
+                    
+                    使用Filebeat转发日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../logs/container.html">
+            
+                <a href="../logs/container.html">
+            
+                    
+                    同主机上其他容器连接ELK容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../build.html">
+            
+                <a href="../build.html">
+            
+                    
+                    构建镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    调整镜像
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.7.1" data-path="logstash.html">
+            
+                <a href="logstash.html">
+            
+                    
+                    更新Logstash参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="elasticsearch_p.html">
+            
+                <a href="elasticsearch_p.html">
+            
+                    
+                    安装Elasticsearch插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="logstash_p.html">
+            
+                <a href="logstash_p.html">
+            
+                    
+                    安装Logstash插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="kibana_p.html">
+            
+                <a href="kibana_p.html">
+            
+                    
+                    安装Kibana插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../persisting.html">
+            
+                <a href="../persisting.html">
+            
+                    
+                    日志数据持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../snapshot.html">
+            
+                <a href="../snapshot.html">
+            
+                    
+                    快照与还原
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../cluster/">
+            
+                <a href="../cluster/">
+            
+                    
+                    建立一个Elasticsearch集群
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../cluster/diff.html">
+            
+                <a href="../cluster/diff.html">
+            
+                    
+                    在不同主机上运行Elasticsearch节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../cluster/single.html">
+            
+                <a href="../cluster/single.html">
+            
+                    
+                    在单机上运行Elasticsearch节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../cluster/opti.html">
+            
+                <a href="../cluster/opti.html">
+            
+                    
+                    优化Elasticsearch节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../security/">
+            
+                <a href="../security/">
+            
+                    
+                    安全注意事项
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../security/cert.html">
+            
+                <a href="../security/cert.html">
+            
+                    
+                    证书注释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../security/ssl.html">
+            
+                <a href="../security/ssl.html">
+            
+                    
+                    禁用SSL/TLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../issues.html">
+            
+                <a href="../issues.html">
+            
+                    
+                    经常遇到的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../known.html">
+            
+                <a href="../known.html">
+            
+                    
+                    已知问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../trouble/">
+            
+                <a href="../trouble/">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../trouble/nostart.html">
+            
+                <a href="../trouble/nostart.html">
+            
+                    
+                    Elasticsearch无法运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../trouble/log-emitting.html">
+            
+                <a href="../trouble/log-emitting.html">
+            
+                    
+                    日志发送客户端无法连接到Logstash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../trouble/tips.html">
+            
+                <a href="../trouble/tips.html">
+            
+                    
+                    附加提示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../report.html">
+            
+                <a href="../report.html">
+            
+                    
+                    报告问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../change.html">
+            
+                <a href="../change.html">
+            
+                    
+                    版本变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../ref.html">
+            
+                <a href="../ref.html">
+            
+                    
+                    参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../about.html">
+            
+                <a href="../about.html">
+            
+                    
+                    关于
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >更新Logstash参数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x66F4;&#x65B0;logstash&#x53C2;&#x6570;">&#x66F4;&#x65B0;Logstash&#x53C2;&#x6570;</h1>
+<p>&#x8BE5;&#x955C;&#x50CF;&#x5305;&#x542B;&#x51E0;&#x4E2A;&#x7528;&#x4E8E;Logstash&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;&#x4F8B;&#x5982;<code>01-lumberjack-input.conf,02-beats-input.conf</code>&#xFF09;&#xFF0C;&#x90FD;&#x4F4D;&#x4E8E;<code>/etc/logstash/conf.d</code>&#x3002;</p>
+<p>&#x82E5;&#x8981;&#x4FEE;&#x6539;&#x73B0;&#x6709;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x5C06;&#x672C;&#x5730;&#x914D;&#x7F6E;&#x6587;&#x4EF6;bind-mount&#x5BB9;&#x5668;&#x5185;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x60F3;&#x7528;&#x672C;&#x5730;&#x6587;&#x4EF6;<code>/path/to/your-30-output.conf</code>&#x66FF;&#x6362;&#x955C;&#x50CF;&#x7684;<code>30-output.conf</code>Logstash&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x60A8;&#x5C06;&#x5411;&#x60A8;&#x7684;Docker&#x547D;&#x4EE4;&#x884C;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;<code>-v</code>&#x9009;&#x9879;&#xFF1A;</p>
+<p><code>$ sudo docker run ... \
+    -v /path/to/your-30-output.conf:/etc/logstash/conf.d/30-output.conf \
+    ...</code></p>
+<p>&#x8981;&#x7528;&#x66F4;&#x65B0;&#x7684;&#x6216;&#x9644;&#x52A0;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6269;&#x5C55;&#x539F;&#x59CB;&#x955C;&#x50CF;&#x7684;Dockerfile&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">FROM</span> sebp/elk
+
+<span class="hljs-comment"># overwrite existing file</span>
+<span class="hljs-keyword">ADD</span> <span class="bash">/path/to/your-30-output.conf /etc/logstash/conf.d/30-output.conf
+</span>
+<span class="hljs-comment"># add new file</span>
+<span class="hljs-keyword">ADD</span> <span class="bash">/path/to/new-12-some-filter.conf /etc/logstash/conf.d/12-some-filter.conf
+</span></code></pre>
+<p>&#x7136;&#x540E;&#x4F7F;&#x7528;Docker&#x6784;&#x5EFA;&#x8BED;&#x6CD5;&#x6784;&#x5EFA;&#x6269;&#x5C55;&#x955C;&#x50CF;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 调整镜像">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="elasticsearch_p.html" class="navigation navigation-next " aria-label="Next page: 安装Elasticsearch插件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"更新Logstash参数","level":"1.7.1","depth":2,"next":{"title":"安装Elasticsearch插件","level":"1.7.2","depth":2,"path":"tweak/elasticsearch_p.md","ref":"tweak/elasticsearch_p.md","articles":[]},"previous":{"title":"调整镜像","level":"1.7","depth":1,"path":"tweak/README.md","ref":"tweak/README.md","articles":[{"title":"更新Logstash参数","level":"1.7.1","depth":2,"path":"tweak/logstash.md","ref":"tweak/logstash.md","articles":[]},{"title":"安装Elasticsearch插件","level":"1.7.2","depth":2,"path":"tweak/elasticsearch_p.md","ref":"tweak/elasticsearch_p.md","articles":[]},{"title":"安装Logstash插件","level":"1.7.3","depth":2,"path":"tweak/logstash_p.md","ref":"tweak/logstash_p.md","articles":[]},{"title":"安装Kibana插件","level":"1.7.4","depth":2,"path":"tweak/kibana_p.md","ref":"tweak/kibana_p.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"tweak/logstash.md","mtime":"2018-07-09T06:03:57.831Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-09T08:50:54.491Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
