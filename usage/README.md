@@ -18,7 +18,7 @@
 
 ![](https://imgur.com/Og5eps4)
 
-访问Kibana的Web界面：浏览 http://\<your-host>:5601，其中\<your-host>是主机Docker的主机名或IP地址（见注释），例如运行本地版本Docker的主机，或者运行VM宿主版本Docker的虚拟机的IP地址。
+访问Kibana的Web界面：浏览 `http://<your-host>:5601`，其中`<your-host>`是主机Docker的主机名或IP地址（见注释），例如运行本地版本Docker的主机，或者运行VM宿主版本Docker的虚拟机的IP地址。
 
 注意：配置或查找VM宿主版本Docker安装的IP地址，若使用Boot2Docker，参见 https://docs.docker.com/installation/windows/ (Windows)、https://docs.docker.com/installation/mac/ (OS X)。若使用[Vagrant](https://www.vagrantup.com/)，需要设置端口转发(见 https://docs.vagrantup.com/v2/networking/forwarded_ports.html)
 
